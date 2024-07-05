@@ -14,9 +14,16 @@ functions:
       - http:
           path: hello
           method: get
+  api:
+    handler: bootstrap
+    events:
+      - http:
+          path: api
+          method: get
 
 package:
   artifact: bin/hello.zip
+  artifact: bin/api.zip
 
 custom:
   scriptable:
