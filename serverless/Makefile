@@ -8,6 +8,7 @@ current_dir := $(patsubst %/,%,$(dir $(mkfile_path)))
 
 build: ## Build golang binaries
 	rm -rf ${current_dir}/bin
+	mkdir -p ${current_dir}/bin
 	echo "Build go artifacts in ${current_dir}..."
 	@for function in $(functions) ; do \
 		echo "Build $$function" ; \
