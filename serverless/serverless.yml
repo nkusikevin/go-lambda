@@ -30,6 +30,17 @@ functions:
           path: api
           method: get
 
+  loger:
+    package:
+      artifact: ./bin/loger.zip
+    handler: bootstrap
+    runtime: provided.al2
+
+    events:
+      - http:
+          path: loger
+          method: get
+
 custom:
   scriptable:
     hooks:
